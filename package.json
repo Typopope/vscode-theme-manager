@@ -1,0 +1,33 @@
+{
+  "name": "vscode-theme-manager",
+  "displayName": "Theme Manager",
+  "description": "Управление внешним видом VS Code — темы, иконки, шрифты и отмена изменений.",
+  "version": "0.0.2",
+  "publisher": "Anton", 
+  "publisher": "localdev",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Appearance"],
+  "activationEvents": ["onCommand:themeManager.open"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "themeManager.open",
+        "title": "Открыть менеджер тем"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.24",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.9.3"
+  },
+  "type": "commonjs"
+}

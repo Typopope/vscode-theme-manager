@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Theme Manager</title>
+  <style>
+    body {
+      font-family: var(--vscode-font-family);
+      color: var(--vscode-foreground);
+      background: var(--vscode-editor-background);
+      padding: 16px;
+    }
+    label { display: block; margin-top: 8px; }
+    select, input { width: 100%; margin-top: 4px; padding: 4px; }
+    button { margin-top: 12px; padding: 6px 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Настройки оформления</h2>
+
+  <label>Тема</label>
+  <select id="theme">
+    <option>Default Dark+</option>
+    <option>Default Light+</option>
+    <option>Monokai</option>
+    <option>Quiet Light</option>
+    <option>Solarized Dark</option>
+  </select>
+
+  <label>Тема иконок</label>
+  <select id="iconTheme">
+    <option>vs-seti</option>
+    <option>vscode-icons</option>
+    <option>material-icon-theme</option>
+  </select>
+
+  <label>Размер шрифта</label>
+  <input id="fontSize" type="number" value="14" min="10" max="30" />
+
+  <button id="apply">Применить</button>
+  <button id="undo">Отменить изменения</button>
+  <button id="load">Загрузить текущие</button>
+
+  <script src="./ui.js"></script>
+</body>
+</html>
